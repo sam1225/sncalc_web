@@ -1,0 +1,63 @@
+
+body {
+  background-color: #0F0F0F;
+}
+
+
+h1 {
+  color: #F0F1D4;
+  text-align: center;
+  font: italic small-caps bold 50px/2 cursive;
+}
+
+
+.main_para { /* dot for class */
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  align-items: left;
+  text-align: left;
+  background-color: #D0F1F8;
+  border: 1px solid #1F2729;
+  padding: 20px;
+  margin: 10px;
+}
+
+
+input[type=text] {
+  background-color: #EFFAFC;
+  color: black;
+}
+
+
+.content { /* dot for class */
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  align-items: center;
+  text-align: left;
+  background-color: #0F0F0F;
+  border: 1px solid #1F2729;
+  padding: 20px;
+  margin: 10px;
+}
+
+
+#error_alert { /* # for id */
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  align-items: center;
+  text-align: left;
+}
+
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #222623;
+  color: grey;
+  text-align: center;
+}

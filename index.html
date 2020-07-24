@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Subnet Calculator</title>
+  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="index.html">Subnet Calculator</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://en.wikipedia.org/wiki/Subnetwork" target="_blank">Subnetwork</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://en.wikipedia.org/wiki/IPv4" target="_blank">IPv4</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Other Links
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="https://en.wikipedia.org/wiki/IP_address" target="_blank">IP address</a>
+            <a class="dropdown-item" href="https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing" target="_blank">CIDR</a>
+            <a class="dropdown-item" href="https://en.wikipedia.org/wiki/IP_routing" target="_blank">IP routing</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="https://en.wikipedia.org/wiki/IPv6" target="_blank">IPv6</a>
+          </div>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0" action="https://www.google.com/search" method="get" target="_blank">
+        <input class="form-control mr-sm-2" type="search" placeholder="Google Search" aria-label="Search" name="q">
+        <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+
+  <h1>IP Subnet Calculator</h1>
+
+  <div class="main_para">
+    <p>
+      The IP Subnet Calculator enables classless subnet network calculations using IP address and CIDR value.
+
+      <h5>Subnetting</h5>
+      There comes a time when the network becomes too large to manage and performance numbers hit an all-time low as a result of too much traffic.
+      One of the most effective technique to solve this network congestion problem is to break the TCP/IP network into smaller, more manageable pieces.
+      The practice of dividing the network is called subnetting.
+      <hr>
+      <h5>Need for a IPv4 subnet calculator</h5>
+      Every subnet has an address to represent it and these subnets are interconnected via router. The router needs network address and subnet mask to find
+      out whether the incoming IP packet has to be routed to any of its subnetwork. Performing network calculations can be hard at times when you have to
+      consider different parameters as to how many subnets should I have and how many hosts should be in a subnetwork.
+
+      The subnet calculator is a handy tool for finding the number of possible subnets for any given network address block.
+      Partitioning a large network and allocating IP address ranges to different teams is a task that can be calculated mentally, but it's better to have
+      an option to double check your subnet calculations before configuring them in the router.
+    </p>
+  </div>
+
+  <div class="content">
+    <form onsubmit="ipv4Operation(); return false;">
+      <input type="text" id="ipv4", placeholder="IP Address" title="Example: 192.168.0.1">
+      <br><br>
+      <input type="text" id="cidr", placeholder="CIDR", title="Valid range: 1 to 32">
+      <br><br>
+      <!-- <input type="submit"> -->
+      <button type="submit" class="btn btn-dark">Submit</button>
+      <!-- <input type="reset"> -->
+      <button type="reset" class="btn btn-dark">Reset</button>
+    </form>
+    <br>
+  </div>
+  <div id="error_alert">
+  </div>
+
+  <div id="result">
+  </div>
+
+
+  <footer>
+    <p>© 2020 SAN</p>
+  </footer>
+
+
+</body>
+
+</html>
