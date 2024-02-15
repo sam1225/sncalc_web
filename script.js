@@ -1,14 +1,10 @@
 /*
 IP Subnet Calculator
   Based on subnetting chapters in below books:
-    "CCNA Routing and Switching Study Guide" by Todd Lammle - 2013 edition
+    "CCNA Routing and Switching Study Guide" by Todd Lammle
   Validations performed using:
-    calculator.net/ip-subnet-calculator.html
-    tunnelsup.com/subnet-calculator
-
-Date            : 06-JUL-2020
-Author          : Sam
-
+    https://www.calculator.net/ip-subnet-calculator.html
+    https://www.tunnelsup.com/subnet-calculator
 */
 
 const ipTotalBitCount = 32;
@@ -139,7 +135,6 @@ function ipv4Operation() {
 }
 
 
-
 function hostsPerSubnetCalc(cidr) {
     if (cidr <= maxNetworkBitsForUsefulHosts) {
         let unmaskedBits = ipTotalBitCount - cidr;
@@ -157,7 +152,6 @@ function hostsPerSubnetCalc(cidr) {
         hostsPerSubnetCalcDict["Usable Hosts per Subnet"] = 0;
     }
 }
-
 
 
 function listOfSubnets() {

@@ -3,7 +3,7 @@
 
 This web application performs the same operations as the sncalc tool.
 
-***It is written in HTML, CSS, Javascript, & Bootstrap.***
+***It is written in HTML, CSS, Javascript, & Bootstrap***
 
 [Web Link](https://sam1225.github.io/sncalc_web/)
 
